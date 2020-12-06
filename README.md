@@ -83,7 +83,7 @@ In short, a git tag needs to be pushed.
 
 ```shell
 git tag -a 1.0.2 -m "v1.0.2"
-git push origin v1.0.2
+git push origin 1.0.2
 ```
 
 
