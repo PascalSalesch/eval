@@ -14,9 +14,7 @@ This module evaluates the URL hash it receives and exports it.
 4. [Configuration](#configuration)
 5. [Tests](#tests)
 6. [Style Guide](#style-guide)
-7. [Api Reference](#api-reference)
-    1. [Deno](#deno)
-8. [Licensing](#licensing)
+7. [Licensing](#licensing)
 
 
 
