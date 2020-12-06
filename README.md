@@ -24,7 +24,7 @@ This module evaluates the URL hash it receives and exports it.
 ## Getting started
 
 ```js
-import Deno from 'https://deno.land/x/evil/mod.ts?eval=Deno';
+import Deno from 'https://cdn.deno.land/evil/versions/1.0.4/raw/mod.js#Deno';
 ```
 
 
@@ -80,8 +80,8 @@ deno bundle 'https://deno.land/x/evil/mod.ts' eval.bundle.js
 The package is deployed to [deno.land/x/evil](https://deno.land/x/evil). In short, a git tag must be pushed.
 
 ```shell
-git tag -a 1.0.3 -m "v1.0.3"
-git push origin 1.0.3
+git tag -a $major.$minor.$patch -m "v$major.$minor.$patch"
+git push origin $major.$minor.$patch
 ```
 
 
@@ -97,11 +97,13 @@ We are using [SemVer](http://semver.org/) for versioning in order to conform to 
 
 The package evaluates either the hash or the query string.
 
-| Value           | Example                                       | Description                                                                                             |
-| --------------- | --------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| Hash            | `deno.land/x/evil/mod.ts#Deno`                | The module tries to evaluate `Deno`.<br>:warning: The redirect to the latest version will omit the hash |
-| eval parameter  | `deno.land/x/evil/mod.ts?eval=Deno`           | The module tries to evaluate `Deno`                                                                     |
-| async parameter | `deno.land/x/evil/mod.ts?async=true&eval=1+1` | Setting `async` to `true` will await an async function                                                  |
+:warning: The redirect to the latest version will omit query parameters and hashes. Use `cdn.deno.land` instead.
+
+| Value           | Example                                       | Description                                            |
+| --------------- | --------------------------------------------- | ------------------------------------------------------ |
+| Hash            | `deno.land/x/evil/mod.ts#Deno`                | The module tries to evaluate `Deno`                    |
+| eval parameter  | `deno.land/x/evil/mod.ts?eval=Deno`           | The module tries to evaluate `Deno`                    |
+| async parameter | `deno.land/x/evil/mod.ts?async=true&eval=1+1` | Setting `async` to `true` will await an async function |
 
 
 
@@ -113,26 +115,11 @@ A few small tests reside in `test.js`.
 
 ## Style Guide
 
-Follow the [Deno Style Guide](https://deno.land/manual/contributing/style_guide). Lint with the following command:
+Follow the [Deno Style Guide](https://deno.land/manual/contributing/style_guide).
+Lint with the following command:
 
 ```shell
-deno fmt mod.js
-```
-
-
-
-## Api Reference
-
-1. [Deno](#deno)
-
-
-
-### Deno
-
-The module exports the expression to `default`:
-
-```js
-import Deno from 'deno.land/x/evil/mod.ts?eval=Deno';
+deno fmt
 ```
 
 
