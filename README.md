@@ -81,7 +81,7 @@ The package is deployed to [deno.land/x/evil](https://deno.land/x/evil). In shor
 
 ```shell
 git tag -a 1.0.3 -m "v1.0.3"
-git push origin v1.0.3
+git push origin 1.0.3
 ```
 
 
