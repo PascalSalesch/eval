@@ -3,7 +3,7 @@
 
 This module evaluates the URL hash it receives and exports it.
 
-1. [Installing / Getting started](#installing--getting-started)
+1. [Getting started](#getting-started)
 2. [Developing](#developing)
     1. [Built With](#built-with)
     2. [Prerequisites](#prerequisites)
@@ -21,9 +21,11 @@ This module evaluates the URL hash it receives and exports it.
 
 
 
-## Installing / Getting started
+## Getting started
 
-This packages is intended to be used with [Deno](https://github.com/denoland/deno).
+```js
+import Deno from 'https://cdn.deno.land/evil/versions/1.0.1/raw/mod.js#Deno';
+```
 
 
 
@@ -69,7 +71,7 @@ When `deno run ./mod.js` will executed the code in `mod.js`.
 This package requires no build step. If it had any dependencies these could be bundled.
 
 ```shell
-deno bundle https://raw.githubusercontent.com/PascalSalesch/eval/main/mod.js#Deno eval.bundle.js
+deno bundle 'https://raw.githubusercontent.com/PascalSalesch/eval/main/mod.js#Deno' eval.bundle.js
 ```
 
 
@@ -80,8 +82,8 @@ The process of deploying is described at [https://deno.land/x/#info](https://den
 In short, a git tag needs to be pushed.
 
 ```shell
-git tag -a 1.0.0 -m "v1.0.0"
-git push origin v1.0.0
+git tag -a 1.0.2 -m "v1.0.2"
+git push origin v1.0.2
 ```
 
 
@@ -127,7 +129,7 @@ deno fmt mod.js
 The module exports the expression to `default`:
 
 ```js
-import Deno from 'https://cdn.deno.land/evil/versions/1.0.0/raw/mod.js#Deno';
+import Deno from 'https://cdn.deno.land/evil/versions/1.0.1/raw/mod.js#Deno';
 ```
 
 
