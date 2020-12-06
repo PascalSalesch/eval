@@ -25,10 +25,6 @@ This module evaluates the URL hash it receives and exports it.
 
 This packages is intended to be used with [Deno](https://github.com/denoland/deno).
 
-```js
-import Deno from 'https://raw.githubusercontent.com/PascalSalesch/eval/main/mod.js#Deno';
-```
-
 
 
 ## Developing
@@ -79,10 +75,12 @@ deno bundle https://raw.githubusercontent.com/PascalSalesch/eval/main/mod.js#Den
 
 ### Deploying / Publishing
 
-The process of deploying is described at [https://deno.land/x/#info](https://deno.land/x/#info). In short a git tag needs to be pushed.
+The package is deployed to [deno.land/x/evil](https://deno.land/x/evil).
+The process of deploying is described at [https://deno.land/x/#info](https://deno.land/x/#info).
+In short, a git tag needs to be pushed.
 
 ```shell
-git tag -a v1.0.0 
+git tag -a 1.0.0 -m "v1.0.0"
 git push origin v1.0.0
 ```
 
@@ -129,7 +127,7 @@ deno fmt mod.js
 The module exports the expression to `default`:
 
 ```js
-import Deno from 'https://raw.githubusercontent.com/PascalSalesch/eval/main/mod.js#Deno';
+import Deno from 'https://cdn.deno.land/evil/versions/1.0.0/raw/mod.js#Deno';
 ```
 
 
