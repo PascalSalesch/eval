@@ -71,7 +71,7 @@ When `deno run ./mod.js` will executed the code in `mod.js`.
 This package requires no build step. If it had any dependencies these could be bundled.
 
 ```shell
-deno bundle 'https://deno.land/x/evil/mod.ts' eval.bundle.js
+deno bundle 'https://deno.land/x/evil/mod.js' eval.bundle.js
 ```
 
 
